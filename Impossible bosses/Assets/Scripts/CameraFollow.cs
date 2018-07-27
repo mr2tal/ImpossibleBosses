@@ -53,7 +53,7 @@ public class CameraFollow : MonoBehaviour {
             //print(hit);  
 
             //x axis limitation
-            if (!player) {
+            if (player == null) {
                 //   print("player dead");
             }
             else if (hit.x > player.transform.position.x + maxDistance) {
@@ -64,18 +64,21 @@ public class CameraFollow : MonoBehaviour {
             }
 
             //z axis limitation
-            if (!player) {
+            if (player == null) {
                 //   print("player dead");
             }
             else if (hit.z > player.transform.position.z + maxDistance) {
                 hit.z = player.transform.position.z + maxDistance;
             }
-            if (hit.z < player.transform.position.z - maxDistance) {
+            else if (hit.z < player.transform.position.z - maxDistance) {
                 hit.z = player.transform.position.z - maxDistance;
             }
 
             //transform camera position
-            transform.position = ((player.transform.position + hit) / 2) + offset;
+            if (player != null) {
+                transform.position = ((player.transform.position + hit) / 2) + offset;
+            }
+            
             //print(hit);
         }
         // test for my ray from mouse to plane (true if it hits)

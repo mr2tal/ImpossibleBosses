@@ -23,7 +23,7 @@ public class ShootProjectile : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if (!isPlayer) {
+        if (!isPlayer && enemy != null) {
             if (timeBetweenShootCounter <= 0) {
                 timeBetweenShootCounter = shootEveryX;
                 FireProjectile(gameObject.transform.position, enemy.transform.position);
