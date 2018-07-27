@@ -184,11 +184,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 91212127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa601bb167054e84185d80f2f98771aa, type: 3}
+  m_Script: {fileID: 11500000, guid: ffd47fc9d67fc6a48bb4c8d7ccac9cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  mana: 0
   text: {fileID: 396637285}
 --- !u!1001 &101040546
 Prefab:

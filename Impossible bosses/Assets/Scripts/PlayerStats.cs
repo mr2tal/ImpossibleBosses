@@ -2,8 +2,6 @@
 using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
-    public int hitPoints;
-    public int mana;
     public Text text;
     // Use this for initialization
     void Start() {
@@ -12,9 +10,9 @@ public class PlayerStats : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        text.text = "Hp:" + hitPoints.ToString() + " Mana:" + mana.ToString();
+        text.text = "Hp:" + PlayerStatsStatic.HP.ToString() + " Mana:" + PlayerStatsStatic.Mana.ToString();
 
-        if (hitPoints <= 0) {
+        if (PlayerStatsStatic.HP <= 0) {
             Destroy(gameObject);
         }
 
@@ -22,6 +20,6 @@ public class PlayerStats : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        hitPoints--;
+        PlayerStatsStatic.HP--;
     }
 }
