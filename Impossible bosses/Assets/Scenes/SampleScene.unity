@@ -359,6 +359,8 @@ MonoBehaviour:
   player: {fileID: 2111691030}
   plane: {fileID: 73357236}
   cameraSpeed: 0.5
+  minRange: 2
+  maxRange: 2
 --- !u!1 &2111691030
 GameObject:
   m_ObjectHideFlags: 0

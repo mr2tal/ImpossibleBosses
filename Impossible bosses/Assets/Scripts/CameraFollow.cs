@@ -7,6 +7,9 @@ public class CameraFollow : MonoBehaviour {
     public GameObject player;
     public GameObject plane;
     public float cameraSpeed;
+    public float minRange;
+    public float maxRange;
+
 
     private Vector3 offset = new Vector3(0f, 5f, 0f);
 
@@ -16,10 +19,7 @@ public class CameraFollow : MonoBehaviour {
         {
             Cursor.visible = true;
         }
-
-
-
-
+        
 
         Camera.main.transform.position = player.transform.position + offset;
 
@@ -37,10 +37,7 @@ public class CameraFollow : MonoBehaviour {
         Camera.main.transform.rotation = Quaternion.LookRotation(newdir);
 
 
-
-
-
-
+        
     }
 	
 	// Update is called once per frame
@@ -60,9 +57,22 @@ public class CameraFollow : MonoBehaviour {
             Vector3 hit = ray.GetPoint(distance);
 
             print(hit);  
-       
-                transform.position = ((Time.deltaTime + cameraSpeed) * hit) + offset;
-      
+            if (hit.x > player.transform.position.x + maxRange)
+            {
+                hit.x = player.transform.position.x + maxRange;
+            }else if (hit.x < minRange)
+            {
+                hit.x = player.transform.position.x - minRange;
+            }else if (hit.z > maxRange)
+            {
+                hit.z = player.transform.position.x + maxRange;
+            }else if (hit.z < minRange)
+            {
+                hit.z = player.transform.position.x - minRange;
+            }
+
+            transform.position = ((Time.deltaTime + cameraSpeed) * hit) + offset;
+
         }
 
         print(plane.Raycast(ray, out distance));
