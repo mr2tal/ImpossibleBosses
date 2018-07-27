@@ -7,8 +7,7 @@ public class CameraFollow : MonoBehaviour {
     public GameObject player;
     public GameObject plane;
     public float cameraSpeed;
-    public float minRange;
-    public float maxRange;
+    public float maxDistance;
 
 
     private Vector3 offset = new Vector3(0f, 5f, 0f);
@@ -57,19 +56,32 @@ public class CameraFollow : MonoBehaviour {
             Vector3 hit = ray.GetPoint(distance);
 
             print(hit);  
-            if (hit.x > player.transform.position.x + maxRange)
+
+            //x axis limitation
+            if (!player)
             {
-                hit.x = player.transform.position.x + maxRange;
-            }else if (hit.x < minRange)
+                print("player dead");
+            }else if (hit.x > player.transform.position.x + maxDistance)
             {
-                hit.x = player.transform.position.x - minRange;
-            }else if (hit.z > maxRange)
+                hit.x = player.transform.position.x + maxDistance;
+            }else if (hit.x < player.transform.position.x - maxDistance)
             {
-                hit.z = player.transform.position.x + maxRange;
-            }else if (hit.z < minRange)
-            {
-                hit.z = player.transform.position.x - minRange;
+                hit.x = player.transform.position.x - maxDistance;
             }
+
+            //z axis limitation
+            if (!player)
+            {
+                print("player dead");
+            }else if (hit.z > player.transform.position.z + maxDistance)
+                {
+                    hit.z = player.transform.position.z + maxDistance;
+                }
+                if (hit.z < player.transform.position.z - maxDistance)
+                {
+                    hit.z = player.transform.position.z - maxDistance;
+                }
+            
 
             transform.position = ((Time.deltaTime + cameraSpeed) * hit) + offset;
 
