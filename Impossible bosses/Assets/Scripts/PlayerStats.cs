@@ -23,4 +23,9 @@ public class PlayerStats : MonoBehaviour {
 
       
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        hitPoints--;
+    }
 }
