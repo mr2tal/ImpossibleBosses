@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
     public int hitPoints;
     public int mana;
-    public 
+    public Text text;
 	// Use this for initialization
 	void Start () {
        
@@ -13,10 +14,13 @@ public class PlayerStats : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(hitPoints <= 0)
+        text.text = "Hp:" + hitPoints.ToString() + " Mana:" + mana.ToString();
+
+        if (hitPoints <= 0)
         {
             Destroy(gameObject);
         }
+
       
 	}
 }
