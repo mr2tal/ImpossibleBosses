@@ -3,32 +3,28 @@
 public class CameraFollow : MonoBehaviour {
     public bool ShowCursor = false;
     public GameObject player;
-    public Plane plane = new Plane(Vector3.up, Vector3.zero);
+    public static readonly Plane plane = new Plane(Vector3.up, Vector3.zero);
     public float maxDistance;
 
     private Vector3 offset = new Vector3(0f, 10f, 0f);
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         //show cursor
-        if (ShowCursor == false)
-        {
+        if (ShowCursor == false) {
             Cursor.visible = true;
-        }  
+        }
 
         //start position
         Camera.main.transform.position = player.transform.position + offset;
-
 
         //direction between target and start point
         Vector3 dir = player.transform.position - Camera.main.transform.position;
 
         RaycastHit hit;
 
-
         //testing if my ray collides with the player object
-        if(Physics.Raycast(Camera.main.transform.position, dir, out hit))
-        {
+        if (Physics.Raycast(Camera.main.transform.position, dir, out hit)) {
             //print(hit.collider);
         }
 
@@ -37,9 +33,9 @@ public class CameraFollow : MonoBehaviour {
 
         Camera.main.transform.rotation = Quaternion.LookRotation(newdir);
     }
-   
+
     // Update is called once per frame
-    void Update () {
+    void Update() {
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -57,38 +53,32 @@ public class CameraFollow : MonoBehaviour {
             //print(hit);  
 
             //x axis limitation
-            if (!player)
-            {
-             //   print("player dead");
-            }else if (hit.x > player.transform.position.x + maxDistance)
-            {
+            if (!player) {
+                //   print("player dead");
+            }
+            else if (hit.x > player.transform.position.x + maxDistance) {
                 hit.x = player.transform.position.x + maxDistance;
-            }else if (hit.x < player.transform.position.x - maxDistance)
-            {
+            }
+            else if (hit.x < player.transform.position.x - maxDistance) {
                 hit.x = player.transform.position.x - maxDistance;
             }
 
             //z axis limitation
-            if (!player)
-            {
-             //   print("player dead");
-            }else if (hit.z > player.transform.position.z + maxDistance)
-                {
-                    hit.z = player.transform.position.z + maxDistance;
-                }
-                if (hit.z < player.transform.position.z - maxDistance)
-                {
-                    hit.z = player.transform.position.z - maxDistance;
-                }
+            if (!player) {
+                //   print("player dead");
+            }
+            else if (hit.z > player.transform.position.z + maxDistance) {
+                hit.z = player.transform.position.z + maxDistance;
+            }
+            if (hit.z < player.transform.position.z - maxDistance) {
+                hit.z = player.transform.position.z - maxDistance;
+            }
 
             //transform camera position
             transform.position = ((player.transform.position + hit) / 2) + offset;
             //print(hit);
         }
-
         // test for my ray from mouse to plane (true if it hits)
         //print(plane.Raycast(ray, out distance));
-
-
     }
 }
