@@ -5,6 +5,7 @@ using UnityEngine;
 public  static class PlayerStatsStatic {
 
     public static int Hp, mana, movementSpeed;
+    public static string name;
 
     public static int HP
     {
@@ -37,6 +38,17 @@ public  static class PlayerStatsStatic {
         set
         {
             movementSpeed = value;
+        }
+    }
+    public static string Name
+    {
+        get
+        {
+            return name;
+        }
+        set
+        {
+            name = value;
         }
     }
 }

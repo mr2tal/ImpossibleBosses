@@ -4,6 +4,8 @@ using UnityEngine;
 
 public static class EnemyStatsStatic {
     public static int Hp, mana, movementSpeed;
+    public static string name;
+
 
     public static int HP
     {
@@ -36,6 +38,17 @@ public static class EnemyStatsStatic {
         set
         {
             movementSpeed = value;
+        }
+    }
+    public static string Name
+    {
+        get
+        {
+            return name;
+        }
+        set
+        {
+            name = value;
         }
     }
 }

@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        text.text = "Hp:" + PlayerStatsStatic.HP.ToString() + " Mana:" + PlayerStatsStatic.Mana.ToString();
+        text.text = PlayerStatsStatic.name + " Hp: " + PlayerStatsStatic.HP.ToString() + " Mana: " + PlayerStatsStatic.Mana.ToString();
 
         if (PlayerStatsStatic.HP <= 0) {
             Destroy(gameObject);

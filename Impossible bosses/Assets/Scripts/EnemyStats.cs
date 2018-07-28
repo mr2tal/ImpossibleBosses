@@ -7,7 +7,7 @@ public class EnemyStats : MonoBehaviour {
     public Text text;
     void Update()
     {
-        text.text = "Hp:" + EnemyStatsStatic.HP.ToString() + " Mana:" + EnemyStatsStatic.Mana.ToString();
+        text.text =EnemyStatsStatic.name + " Hp: " + EnemyStatsStatic.HP.ToString() + " Mana: " + EnemyStatsStatic.Mana.ToString();
 
         if (EnemyStatsStatic.HP <= 0)
         {

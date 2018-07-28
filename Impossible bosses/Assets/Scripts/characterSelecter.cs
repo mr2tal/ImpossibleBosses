@@ -12,18 +12,21 @@ public class characterSelecter : MonoBehaviour {
       
         if (selectionChoice == 1)
         {
+            PlayerStatsStatic.name ="Warrior";
             PlayerStatsStatic.HP = 10;
             PlayerStatsStatic.Mana = 2;
             PlayerStatsStatic.MovementSpeed = 5;
         }
         if (selectionChoice == 2)
         {
+            PlayerStatsStatic.name = "Ranger";
             PlayerStatsStatic.HP = 5;
             PlayerStatsStatic.Mana = 5;
             PlayerStatsStatic.MovementSpeed = 5;
         }
         if (selectionChoice == 3)
         {
+            PlayerStatsStatic.name = "Mage";
             PlayerStatsStatic.HP = 3;
             PlayerStatsStatic.Mana = 10;
             PlayerStatsStatic.MovementSpeed = 5;
@@ -36,12 +39,14 @@ public class characterSelecter : MonoBehaviour {
     {
         if (selectionChoice == 1)
         {
+            EnemyStatsStatic.name = "Easy Boss";
             EnemyStatsStatic.HP = 10;
             EnemyStatsStatic.Mana = 5;
             EnemyStatsStatic.MovementSpeed = 5;
         }
         if (selectionChoice == 2)
         {
+            EnemyStatsStatic.name = "Hard Boss";
             EnemyStatsStatic.HP = 20;
             EnemyStatsStatic.Mana = 10;
             EnemyStatsStatic.MovementSpeed = 10;
