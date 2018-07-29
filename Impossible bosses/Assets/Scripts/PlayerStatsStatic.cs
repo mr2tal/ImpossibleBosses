@@ -4,10 +4,22 @@ using UnityEngine;
 
 public  static class PlayerStatsStatic {
 
-    public static int Hp, mana, movementSpeed;
+    public static float Hp, mana, movementSpeed;
     public static string name;
+    public static float[] spells = new float[6];
 
-    public static int HP
+    public static float[] Spells
+    {
+        get
+        {
+            return spells;
+        }
+        set
+        {
+            spells = value;
+        }
+    }
+    public static float HP
     {
         get
         {
@@ -18,7 +30,7 @@ public  static class PlayerStatsStatic {
             Hp = value;
         }
     }
-    public static int Mana
+    public static float Mana
     {
         get
         {
@@ -29,7 +41,7 @@ public  static class PlayerStatsStatic {
             mana = value;
         }
     }
-    public static int MovementSpeed
+    public static float MovementSpeed
     {
         get
         {

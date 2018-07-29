@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class EnemyStatsStatic {
-    public static int Hp, mana, movementSpeed;
+    public static float Hp, mana, movementSpeed;
     public static string name;
 
 
-    public static int HP
+    public static float HP
     {
         get
         {
@@ -18,7 +18,7 @@ public static class EnemyStatsStatic {
             Hp = value;
         }
     }
-    public static int Mana
+    public static float Mana
     {
         get
         {
@@ -29,7 +29,7 @@ public static class EnemyStatsStatic {
             mana = value;
         }
     }
-    public static int MovementSpeed
+    public static float MovementSpeed
     {
         get
         {

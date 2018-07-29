@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class characterSelecter : MonoBehaviour {
-
-    public Vector3 playerSpawnPos = new Vector3(0, 1, 0);
-
+    
     public void StartGame(int selectionChoice)
     {
       

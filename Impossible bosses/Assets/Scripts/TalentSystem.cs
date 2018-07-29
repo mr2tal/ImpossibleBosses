@@ -6,33 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class TalentSystem : MonoBehaviour {
 
-    public int talentPoints;
-    public int chosenTalentMaximum;
-    public Text text;
-
-	// Use this for initialization
-	void Start () {
-        chosenTalentMaximum = talentPoints;
-        text.text = "Talent points = " + talentPoints.ToString();
+    public Dropdown[] dropdowns;
+    private int counter = 0;
+    // Use this for initialization
+    void Start() {
+   
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        text.text = "Talent points = " + talentPoints.ToString();
-    }
 
-    public void ResetTalents()
-    {
-        talentPoints = chosenTalentMaximum;
-    }
 
-    public void TalentClicked()
-    {
-        if (talentPoints > 0)
+    // Update is called once per frame
+    void Update () {
+            foreach (Dropdown i in dropdowns)
         {
-            talentPoints = talentPoints - 1;
+            if (counter < 6)
+            {
+                PlayerStatsStatic.Spells[counter] = i.value;
+                counter = counter + 1;
+            }
         }
-
+        counter = 0;
     }
 
     public void StartGame()
