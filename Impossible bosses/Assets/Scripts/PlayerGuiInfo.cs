@@ -8,6 +8,7 @@ public class PlayerGuiInfo : MonoBehaviour {
     // Use this for initialization
     void Start() {
         SetIcons();
+        Spells.instantiator = Instantiate;
     }
 
     // Update is called once per frame
