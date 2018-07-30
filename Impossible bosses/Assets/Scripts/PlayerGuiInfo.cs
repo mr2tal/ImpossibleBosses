@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerStats : MonoBehaviour {
+public class PlayerGuiInfo : MonoBehaviour {
     public Text stats;
     public Image mouse1, mouse2, keyQ, keyE, keyR, keyF;
     public Sprite mouse1_0, mouse1_1, mouse1_2;
