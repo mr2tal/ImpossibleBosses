@@ -24,9 +24,4 @@ public class EnemyStats : MonoBehaviour {
 
 
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        EnemyStatsStatic.HP--;
-    }
 }

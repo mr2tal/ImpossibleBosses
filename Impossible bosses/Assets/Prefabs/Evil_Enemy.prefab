@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   isPlayer: 0
-  projectilePrefab: {fileID: 54559154294567414, guid: 92f6cffd9288c734b952e2060f0c8e0c,
+  projectilePrefab: {fileID: 114294452493122930, guid: 92f6cffd9288c734b952e2060f0c8e0c,
     type: 2}
 --- !u!114 &114547734336261818
 MonoBehaviour:

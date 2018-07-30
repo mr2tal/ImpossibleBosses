@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   isPlayer: 1
-  projectilePrefab: {fileID: 54693863208694116, guid: 92f6cffd9288c734b952e2060f0c8e0c,
+  projectilePrefab: {fileID: 114294452493122930, guid: 92f6cffd9288c734b952e2060f0c8e0c,
     type: 2}
 --- !u!114 &114096643898807136
 MonoBehaviour:
@@ -124,9 +124,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa601bb167054e84185d80f2f98771aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
-  mana: 0
-  text: {fileID: 0}
+  stats: {fileID: 0}
+  mouse1: {fileID: 0}
+  mouse2: {fileID: 0}
+  keyQ: {fileID: 0}
+  keyE: {fileID: 0}
+  keyR: {fileID: 0}
+  keyF: {fileID: 0}
+  mouse1_0: {fileID: 0}
+  mouse1_1: {fileID: 0}
+  mouse1_2: {fileID: 0}
 --- !u!136 &136851651375939216
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -25,10 +25,6 @@ public class PlayerStats : MonoBehaviour {
 
     }
 
-    private void OnTriggerEnter(Collider other) {
-        PlayerStatsStatic.HP--;
-    }
-
     public void SetIcons()
     {
         if (PlayerStatsStatic.Spells[0] == 0)
