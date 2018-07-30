@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -583,6 +583,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 223779935278735944, guid: cede3799b42229f4aa5d6fa9003de119,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cede3799b42229f4aa5d6fa9003de119, type: 2}
   m_IsPrefabAsset: 0
@@ -727,8 +732,8 @@ MonoBehaviour:
   keyR: {fileID: 316542998}
   keyF: {fileID: 910563829}
   mouse1_0: {fileID: 21300000, guid: 7a8ca745b70481a4c97cddbe550a2f27, type: 3}
-  mouse1_1: {fileID: 21300000, guid: 7a8ca745b70481a4c97cddbe550a2f27, type: 3}
-  mouse1_2: {fileID: 21300000, guid: 7a8ca745b70481a4c97cddbe550a2f27, type: 3}
+  mouse1_1: {fileID: 21300000, guid: 99eb775b6e852c84eae410286edec6ab, type: 3}
+  mouse1_2: {fileID: 21300000, guid: 5cb95b08dc60ad143b455addfd0acf84, type: 3}
 --- !u!1001 &1956008506
 Prefab:
   m_ObjectHideFlags: 0

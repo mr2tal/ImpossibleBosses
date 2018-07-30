@@ -17,4 +17,21 @@ public class Menu : MonoBehaviour {
             menu.enabled = !menu.enabled;
         }
 	}
+
+    public void OnClick(int choice)
+    {
+        switch (choice)
+        {
+            case 1:
+                menu.enabled = !menu.enabled;
+                break;
+            case 2:
+                break;
+            case 3:
+                Application.Quit();
+                break;
+            default:
+                break;
+        }
+    }
 }
