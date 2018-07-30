@@ -2,9 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class characterSelecter : MonoBehaviour {
-    
+    public Text choiceText;
+
+
+
+    void Start()
+    {
+        EnemyChoice(1); 
+    }
+
+    void Update()
+    {
+        choiceText.text = "Enemy: " + EnemyStatsStatic.name;    
+    }
     public void StartGame(int selectionChoice)
     {
       
