@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 23871020035032386}
   - component: {fileID: 136122391087772778}
   - component: {fileID: 114331295317213386}
-  - component: {fileID: 114547734336261818}
+  - component: {fileID: 114685506251609698}
+  - component: {fileID: 114446128547704442}
   m_Layer: 0
   m_Name: Evil_Enemy
   m_TagString: Untagged
@@ -97,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d7917fdf58bde4e8a83f6bcb293aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 1400217867088658, guid: eab7b5451d3abdc4e90a435295a27ce9, type: 2}
   isPlayer: 0
   projectilePrefab: {fileID: 114294452493122930, guid: 92f6cffd9288c734b952e2060f0c8e0c,
     type: 2}
---- !u!114 &114547734336261818
+--- !u!114 &114446128547704442
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,10 +110,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1778380779209248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffd47fc9d67fc6a48bb4c8d7ccac9cfe, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d89b51c0f70b8d4a884a9e3ee1bee10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
+--- !u!114 &114685506251609698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1778380779209248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc082ac39dbd3f04d8945f4207dd983b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 114258056635378388, guid: 9b0e522d33f4d234a89250e1f5fdb987, type: 2}
   enemyHealthBar: {fileID: 0}
 --- !u!136 &136122391087772778
 CapsuleCollider:

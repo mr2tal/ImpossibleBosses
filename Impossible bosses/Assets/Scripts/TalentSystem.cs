@@ -20,7 +20,7 @@ public class TalentSystem : MonoBehaviour {
         {
             if (counter < 6)
             {
-                PlayerStatsStatic.Spells[counter] = i.value;
+                MainSceneStartUpVars.spells[counter] = i.value;
                 counter = counter + 1;
             }
         }

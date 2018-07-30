@@ -167,6 +167,16 @@ Prefab:
       propertyPath: enemyHealthBar
       value: 
       objectReference: {fileID: 1090853638}
+    - target: {fileID: 114685506251609698, guid: a74d0d1723a63df40bffe477566e4c03,
+        type: 2}
+      propertyPath: enemyHealthBar
+      value: 
+      objectReference: {fileID: 1090853638}
+    - target: {fileID: 114685506251609698, guid: a74d0d1723a63df40bffe477566e4c03,
+        type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 396637285}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a74d0d1723a63df40bffe477566e4c03, type: 2}
   m_IsPrefabAsset: 0
@@ -690,7 +700,8 @@ Prefab:
       propertyPath: keyF
       value: 
       objectReference: {fileID: 910563829}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114096643898807136, guid: eab7b5451d3abdc4e90a435295a27ce9, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: eab7b5451d3abdc4e90a435295a27ce9, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1779936088 stripped
@@ -698,6 +709,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1400217867088658, guid: eab7b5451d3abdc4e90a435295a27ce9,
     type: 2}
   m_PrefabInternal: {fileID: 1779936087}
+--- !u!114 &1779936089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779936088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ac0bfb7d5746b478b6db91f5c20070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1956008506
 Prefab:
   m_ObjectHideFlags: 0

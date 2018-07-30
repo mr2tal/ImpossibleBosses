@@ -9,6 +9,10 @@ public class Projectile : MonoBehaviour {
 
     private static void doNothing() { }
     private static bool alwaysTrueD1(Collider collision) {
+        Stats Cstat = collision.gameObject.GetComponent<Stats>();
+        if(Cstat != null) {
+            Cstat.dealDamage(1);
+        }
         return true;
     }
 
