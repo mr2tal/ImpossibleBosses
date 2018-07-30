@@ -17,7 +17,7 @@ public class ShootProjectile : MonoBehaviour {
     void Update() {
         if (isPlayer && Input.GetButtonDown("Fire1")) {
             Vector3 targetCoordinates = VectorFun.GetMouseCoordinatesOnPlane();
-            Spells.Bolt(projectilePrefab, targetCoordinates, gameObject, 0.5f, 10f, 1);
+            Spells.FireBolt(targetCoordinates,gameObject);
         }
     }
 
@@ -25,7 +25,7 @@ public class ShootProjectile : MonoBehaviour {
         if (!isPlayer && enemy != null) {
             if (timeBetweenShootCounter <= 0) {
                 timeBetweenShootCounter = shootEveryX;
-                Spells.Bolt(projectilePrefab, enemy.transform.position, gameObject, 0.1f, 20f, 1);
+                Spells.FireBolt(enemy.transform.position,gameObject);
             }
             else {
                 timeBetweenShootCounter--;

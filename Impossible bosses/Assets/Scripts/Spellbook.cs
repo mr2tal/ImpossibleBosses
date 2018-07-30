@@ -40,8 +40,8 @@ public class Spellbook {
         public readonly Nr3 nr;
         public readonly RoleClass roleClass;
         public readonly KeyRep keyRep;
-        public readonly Action<Vector3> spell;
-        public spellRow(Nr3 nr, RoleClass roleClass, KeyRep keyRep, Action<Vector3> spell) {
+        public readonly Action<Vector3,GameObject> spell;
+        public spellRow(Nr3 nr, RoleClass roleClass, KeyRep keyRep, Action<Vector3,GameObject> spell) {
             this.nr = nr;
             this.roleClass = roleClass;
             this.keyRep = keyRep;
@@ -74,8 +74,8 @@ public class Spellbook {
 
         }.AsQueryable();
 
-    public static Action<Vector3> index(Nr3 nr, RoleClass roleclass, KeyRep keyrep) {
-        IQueryable<Action<Vector3>> quary = from spellRow row
+    public static Action<Vector3,GameObject> index(Nr3 nr, RoleClass roleclass, KeyRep keyrep) {
+        IQueryable<Action<Vector3,GameObject>> quary = from spellRow row
                                             in FullSpellBook
                                             where row.roleClass == roleclass
                                                && row.nr == nr
