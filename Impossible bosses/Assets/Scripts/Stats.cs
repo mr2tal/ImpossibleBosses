@@ -18,7 +18,7 @@ public class Stats : MonoBehaviour {
         }
 
         if(hp <= 0) {
-            Destroy(gameObject);
+            Destroy(gameObject,1.0f);
         }
     }
 
