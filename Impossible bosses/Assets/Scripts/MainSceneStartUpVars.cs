@@ -8,6 +8,6 @@
     public static int Emana = 10;
     public static float Emovesp = 10;
     public static int[] spells = new int[6];
-
+    
 }
 

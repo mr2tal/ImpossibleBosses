@@ -22,9 +22,11 @@ GameObject:
   - component: {fileID: 33968048793536592}
   - component: {fileID: 23785363047560300}
   - component: {fileID: 136851651375939216}
-  - component: {fileID: 114096643898807136}
   - component: {fileID: 114015749245665130}
   - component: {fileID: 114865024762334500}
+  - component: {fileID: 114372619940354994}
+  - component: {fileID: 114534893730136780}
+  - component: {fileID: 114094499593632028}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -102,7 +104,20 @@ MonoBehaviour:
   isPlayer: 1
   projectilePrefab: {fileID: 114294452493122930, guid: 92f6cffd9288c734b952e2060f0c8e0c,
     type: 2}
---- !u!114 &114096643898807136
+--- !u!114 &114094499593632028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1400217867088658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1e499099be41043980c43fa9ebe32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castBar: {fileID: 0}
+  castBarTime: {fileID: 0}
+--- !u!114 &114372619940354994
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,6 +128,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ac0bfb7d5746b478b6db91f5c20070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114534893730136780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1400217867088658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa601bb167054e84185d80f2f98771aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  mouse1: {fileID: 0}
+  mouse2: {fileID: 0}
+  keyQ: {fileID: 0}
+  keyE: {fileID: 0}
+  keyR: {fileID: 0}
+  keyF: {fileID: 0}
+  mouse1_0: {fileID: 21300000, guid: 7a8ca745b70481a4c97cddbe550a2f27, type: 3}
+  mouse1_1: {fileID: 21300000, guid: 99eb775b6e852c84eae410286edec6ab, type: 3}
+  mouse1_2: {fileID: 21300000, guid: 5cb95b08dc60ad143b455addfd0acf84, type: 3}
 --- !u!114 &114865024762334500
 MonoBehaviour:
   m_ObjectHideFlags: 1

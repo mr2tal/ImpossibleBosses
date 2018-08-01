@@ -15,10 +15,12 @@ public class ShootProjectile : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        /*
         if (isPlayer && Input.GetButtonDown("Fire1")) {
             Vector3 targetCoordinates = VectorFun.GetMouseCoordinatesOnPlane();
             Spells.FireBolt(targetCoordinates,gameObject);
         }
+        */
     }
 
     void FixedUpdate() {

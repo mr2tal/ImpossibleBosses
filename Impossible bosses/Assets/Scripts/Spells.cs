@@ -4,6 +4,7 @@ using System;
 public static class Spells {
     public static Func<Projectile, Vector3, Quaternion, Projectile> instantiator = GameObject.Find("Initializer").GetComponent<MainSceneInitializer>().instanciator;
     public static Projectile prefab = GameObject.Find("Initializer").GetComponent<MainSceneInitializer>().projectilePrefab;
+   
 
     public static readonly Vector3 yzero = new Vector3(1, 0, 1);
     public static readonly float boltSpeed = 0.2f;
@@ -42,4 +43,5 @@ public static class Spells {
 
     public static Action<Vector3,GameObject> FireBolt = genericBolt(boltSpeed, boltRange, boltDamage);
     public static Action<Vector3,GameObject> SlowMovingBolt = genericBolt(boltSpeed * 0.5f, boltRange * 1.2f, boltDamage * 2);
+    public static Action<Vector3, GameObject> ShortBolt = genericBolt(boltSpeed, boltRange * 0.5f, boltDamage * 3);
 }

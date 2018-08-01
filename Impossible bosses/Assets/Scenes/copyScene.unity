@@ -496,7 +496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3283e3e2edaa443b66bac23be4eb53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1779936088}
   projectilePrefab: {fileID: 114294452493122930, guid: 92f6cffd9288c734b952e2060f0c8e0c,
     type: 2}
 --- !u!4 &1164951401
@@ -512,6 +511,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1383916338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114853683877500914, guid: 9b0e522d33f4d234a89250e1f5fdb987,
+    type: 2}
+  m_PrefabInternal: {fileID: 1956008506}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1532173599 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114525284501037230, guid: 9b0e522d33f4d234a89250e1f5fdb987,
@@ -524,6 +529,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1956008506}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1711479826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114419803154113972, guid: 9b0e522d33f4d234a89250e1f5fdb987,
+    type: 2}
+  m_PrefabInternal: {fileID: 1956008506}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1760452329
 Prefab:
   m_ObjectHideFlags: 0
@@ -673,71 +684,57 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 101040547}
     - target: {fileID: 114015749245665130, guid: eab7b5451d3abdc4e90a435295a27ce9,
         type: 2}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 91212127}
-    - target: {fileID: 114015749245665130, guid: eab7b5451d3abdc4e90a435295a27ce9,
+    - target: {fileID: 114534893730136780, guid: eab7b5451d3abdc4e90a435295a27ce9,
         type: 2}
-      propertyPath: projectilePrefab
-      value: 
-      objectReference: {fileID: 114294452493122930, guid: 92f6cffd9288c734b952e2060f0c8e0c,
-        type: 2}
-    - target: {fileID: 0}
-      propertyPath: mouse1
-      value: 
-      objectReference: {fileID: 234332607}
-    - target: {fileID: 0}
-      propertyPath: mouse1_1
-      value: 
-      objectReference: {fileID: 21300000, guid: 5cb95b08dc60ad143b455addfd0acf84,
-        type: 3}
-    - target: {fileID: 0}
-      propertyPath: mouse1_2
-      value: 
-      objectReference: {fileID: 21300000, guid: 99eb775b6e852c84eae410286edec6ab,
-        type: 3}
-    - target: {fileID: 0}
-      propertyPath: mouse1_3
-      value: 
-      objectReference: {fileID: 21300000, guid: 99eb775b6e852c84eae410286edec6ab,
-        type: 3}
-    - target: {fileID: 0}
-      propertyPath: mouse1_0
-      value: 
-      objectReference: {fileID: 21300000, guid: 7a8ca745b70481a4c97cddbe550a2f27,
-        type: 3}
-    - target: {fileID: 0}
       propertyPath: stats
       value: 
       objectReference: {fileID: 101040547}
-    - target: {fileID: 0}
+    - target: {fileID: 114534893730136780, guid: eab7b5451d3abdc4e90a435295a27ce9,
+        type: 2}
+      propertyPath: mouse1
+      value: 
+      objectReference: {fileID: 234332607}
+    - target: {fileID: 114534893730136780, guid: eab7b5451d3abdc4e90a435295a27ce9,
+        type: 2}
       propertyPath: mouse2
       value: 
       objectReference: {fileID: 1566318087}
-    - target: {fileID: 0}
+    - target: {fileID: 114534893730136780, guid: eab7b5451d3abdc4e90a435295a27ce9,
+        type: 2}
       propertyPath: keyQ
       value: 
       objectReference: {fileID: 1532173599}
-    - target: {fileID: 0}
+    - target: {fileID: 114534893730136780, guid: eab7b5451d3abdc4e90a435295a27ce9,
+        type: 2}
       propertyPath: keyE
       value: 
       objectReference: {fileID: 898063303}
-    - target: {fileID: 0}
+    - target: {fileID: 114534893730136780, guid: eab7b5451d3abdc4e90a435295a27ce9,
+        type: 2}
       propertyPath: keyR
       value: 
       objectReference: {fileID: 316542998}
-    - target: {fileID: 0}
+    - target: {fileID: 114534893730136780, guid: eab7b5451d3abdc4e90a435295a27ce9,
+        type: 2}
       propertyPath: keyF
       value: 
       objectReference: {fileID: 910563829}
-    m_RemovedComponents:
-    - {fileID: 114096643898807136, guid: eab7b5451d3abdc4e90a435295a27ce9, type: 2}
+    - target: {fileID: 114094499593632028, guid: eab7b5451d3abdc4e90a435295a27ce9,
+        type: 2}
+      propertyPath: castBar
+      value: 
+      objectReference: {fileID: 1383916338}
+    - target: {fileID: 114094499593632028, guid: eab7b5451d3abdc4e90a435295a27ce9,
+        type: 2}
+      propertyPath: castBarTime
+      value: 
+      objectReference: {fileID: 1711479826}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab7b5451d3abdc4e90a435295a27ce9, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1779936088 stripped
@@ -745,38 +742,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1400217867088658, guid: eab7b5451d3abdc4e90a435295a27ce9,
     type: 2}
   m_PrefabInternal: {fileID: 1779936087}
---- !u!114 &1779936089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1779936088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59ac0bfb7d5746b478b6db91f5c20070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1779936090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1779936088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa601bb167054e84185d80f2f98771aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats: {fileID: 101040547}
-  mouse1: {fileID: 234332607}
-  mouse2: {fileID: 1566318087}
-  keyQ: {fileID: 1532173599}
-  keyE: {fileID: 898063303}
-  keyR: {fileID: 316542998}
-  keyF: {fileID: 910563829}
-  mouse1_0: {fileID: 21300000, guid: 7a8ca745b70481a4c97cddbe550a2f27, type: 3}
-  mouse1_1: {fileID: 21300000, guid: 99eb775b6e852c84eae410286edec6ab, type: 3}
-  mouse1_2: {fileID: 21300000, guid: 5cb95b08dc60ad143b455addfd0acf84, type: 3}
 --- !u!1001 &1956008506
 Prefab:
   m_ObjectHideFlags: 0
