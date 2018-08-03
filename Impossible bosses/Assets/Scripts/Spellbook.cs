@@ -75,26 +75,26 @@ public class Spellbook {
         snd,
         thr
     }
-
+    // nr3 = spellnumber, roleclass = player class, keyrep is what button it represent, spell = spell, cast time , cooldown, can it be casted on move?
     public static IQueryable<spellRow> FullSpellBook = new spellRow[] {
               new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.M0, Spells.FireBolt, 1f, 1f)
             , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.M0, Spells.SlowMovingBolt, 2f, 2f)
             , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.M0, Spells.ShortBolt, 3f, 3f)
-            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.M1, Spells.FireBolt, 1f, 1f)
-            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.M1, Spells.SlowMovingBolt, 2f, 2f)
-            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.M1, Spells.ShortBolt, 3f, 3f)
-            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.Q, Spells.FireBolt, 1f, 1f)
-            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.Q, Spells.SlowMovingBolt, 2f, 2f)
-            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.Q, Spells.ShortBolt, 3f, 3f)
-            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.E, Spells.FireBolt, 1f, 1f)
-            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.E, Spells.SlowMovingBolt, 2f, 2f)
-            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.E, Spells.ShortBolt, 3f, 3f)
-            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.R, Spells.FireBolt, 1f, 1f)
-            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.R, Spells.SlowMovingBolt, 2f, 2f)
-            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.R, Spells.ShortBolt, 3f, 3f)
-            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.F, Spells.FireBolt, 1f, 1f)
-            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.F, Spells.SlowMovingBolt, 2f, 2f)
-            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.F, Spells.ShortBolt, 3f, 3f)
+            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.M1, Spells.m1_1Bolt, 1f, 1f)
+            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.M1, Spells.m1_2Bolt, 2f, 2f)
+            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.M1, Spells.m1_3Bolt, 3f, 3f)
+            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.Q, Spells.Q_1Bolt, 1f, 1f)
+            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.Q, Spells.Q_2Bolt, 2f, 2f)
+            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.Q, Spells.Q_3Bolt, 3f, 3f)
+            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.E, Spells.E_1Bolt, 1f, 1f)
+            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.E, Spells.E_2Bolt, 2f, 2f)
+            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.E, Spells.E_3Bolt, 3f, 3f)
+            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.R, Spells.R_1Bolt, 1f, 1f)
+            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.R, Spells.R_2Bolt, 2f, 2f)
+            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.R, Spells.R_3Bolt, 3f, 3f)
+            , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.F, Spells.F_1Bolt, 1f, 1f)
+            , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.F, Spells.F_2Bolt, 2f, 2f)
+            , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.F, Spells.F_3Bolt, 3f, 3f)
             ,
 
         }.AsQueryable();
@@ -118,12 +118,11 @@ public class Spellbook {
         return quary.First(); // get first spell in resulting table or crash if none exist.
     }
 
-    public static float Cooldown(KeyRep keyrep, Action<Vector3, GameObject> spell)
+    public static float Cooldown(Action<Vector3, GameObject> spell)
     {
         IQueryable<float> quary = from spellRow row
                                   in FullSpellBook
                                   where row.spell == spell
-                                  && row.keyRep == keyrep
                                   select row.cooldown;
         return quary.First(); // get first spell in resulting table or crash if none exist.
     }

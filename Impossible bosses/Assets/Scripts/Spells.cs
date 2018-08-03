@@ -44,4 +44,19 @@ public static class Spells {
     public static Action<Vector3,GameObject> FireBolt = genericBolt(boltSpeed, boltRange, boltDamage);
     public static Action<Vector3,GameObject> SlowMovingBolt = genericBolt(boltSpeed * 0.5f, boltRange * 1.2f, boltDamage * 2);
     public static Action<Vector3, GameObject> ShortBolt = genericBolt(boltSpeed, boltRange * 0.5f, boltDamage * 3);
+    public static Action<Vector3, GameObject> m1_1Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> m1_2Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> m1_3Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> Q_1Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> Q_2Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> Q_3Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> E_1Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> E_2Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> E_3Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> R_1Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> R_2Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> R_3Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> F_1Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> F_2Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
+    public static Action<Vector3, GameObject> F_3Bolt = genericBolt(boltSpeed, boltRange, boltDamage);
 }

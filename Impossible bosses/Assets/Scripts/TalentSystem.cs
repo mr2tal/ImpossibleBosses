@@ -39,7 +39,6 @@ public class TalentSystem : MonoBehaviour {
 
     public void StartGame()
     {
-        
         SceneManager.LoadScene(2);
     }
 
@@ -177,61 +176,61 @@ public class TalentSystem : MonoBehaviour {
             switch (MainSceneStartUpVars.spells[1])
             {
                 case 0:
-                    m1 = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    m1 = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M1);
                     break;
                 case 1:
-                    m1 = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    m1 = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M1);
                     break;
                 case 2:
-                    m1 = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    m1 = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M1);
                     break;
             }
             switch (MainSceneStartUpVars.spells[2])
             {
                 case 0:
-                    keyQ = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyQ = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.Q);
                     break;
                 case 1:
-                    keyQ = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyQ = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.Q);
                     break;
                 case 2:
-                    keyQ = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyQ = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.Q);
                     break;
             }
             switch (MainSceneStartUpVars.spells[3])
             {
                 case 0:
-                    keyE = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyE = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.E);
                     break;
                 case 1:
-                    keyE = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyE = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.E);
                     break;
                 case 2:
-                    keyE = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyE = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.E);
                     break;
             }
             switch (MainSceneStartUpVars.spells[4])
             {
                 case 0:
-                    keyR = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyR = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.R);
                     break;
                 case 1:
-                    keyR = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyR = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.R);
                     break;
                 case 2:
-                    keyR = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyR = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.R);
                     break;
             }
             switch (MainSceneStartUpVars.spells[5])
             {
                 case 0:
-                    keyF = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyF = Spellbook.index(Spellbook.Nr3.fst, Spellbook.RoleClass.Mage, Spellbook.KeyRep.F);
                     break;
                 case 1:
-                    keyF = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyF = Spellbook.index(Spellbook.Nr3.snd, Spellbook.RoleClass.Mage, Spellbook.KeyRep.F);
                     break;
                 case 2:
-                    keyF = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.M0);
+                    keyF = Spellbook.index(Spellbook.Nr3.thr, Spellbook.RoleClass.Mage, Spellbook.KeyRep.F);
                     break;
             }
         }
