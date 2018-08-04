@@ -1,24 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Stats : MonoBehaviour {
     public int hp { get; private set; }
     public int mana { get; private set; }
     public float mspeed { get; private set; }
     // buffs.
-    private Queue<int> dmgq = new Queue<int>();
 
     public void dealDamage(int dmg) {
-        dmgq.Enqueue(dmg);
+        hp -= dmg;
     }
-    private void FixedUpdate() {
-        while(dmgq.Count > 0) {
-            hp -= dmgq.Dequeue();
-        }
 
-        if(hp <= 0) {
-            Destroy(gameObject,0.4f);
+    private void FixedUpdate() {
+        if (hp <= 0) {
+            Destroy(gameObject, 0.4f);
         }
     }
 

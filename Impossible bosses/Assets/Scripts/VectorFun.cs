@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Utilities {
     public static class VectorFun {
@@ -15,6 +18,15 @@ namespace Utilities {
                 // camera is somewhere (or at some angle) where it should not be.
                 return Vector3.zero;
             }
+        }
+        public static IEnumerable<GameObject> getTagsInRadius(string tag, Vector3 center, float radius) {
+            IEnumerable<GameObject> ob = GameObject.FindGameObjectsWithTag(tag);
+            return ob.Where(x => Vector3.Distance(x.transform.position, center) <= radius);
+        }
+
+        public static IEnumerable<GameObject> getTagsInCone(string tag, Vector3 center, Vector3 direction, float radius, float angle) {
+            IEnumerable<GameObject> ob = getTagsInRadius(tag, center, radius);
+            return ob.Where(x => Vector3.Angle((x.transform.position - center), direction) <= angle);
         }
     }
 }
