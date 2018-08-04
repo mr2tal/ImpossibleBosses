@@ -14,7 +14,7 @@ public class CastingSpell : MonoBehaviour {
     private bool isCasting = false;
     private float castTime;
     private Action<Vector3, GameObject> currentSpell;
-    public float globalCooldown;
+    private float globalCooldown = 1f;
     private float[] fullCooldowns = new float[6];
     private float[] currentCooldowns = new float[6];
     private int index;
@@ -36,8 +36,7 @@ public class CastingSpell : MonoBehaviour {
 
     private void Update()
     {
-        if (globalCooldown <= 0) 
-        {
+        
             if (isCasting == false)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -84,10 +83,7 @@ public class CastingSpell : MonoBehaviour {
                 }
             }
             
-        }else
-            {
-                globalCooldown = globalCooldown - Time.deltaTime;
-            }
+        
         if (isCasting == true && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
         {
             CancelCast();
@@ -104,13 +100,17 @@ public class CastingSpell : MonoBehaviour {
 
         for (int i = 0; i < 6; i++)
         {
-            if (currentCooldowns[i] > 0)
+            if (currentCooldowns[i] >= 0)
             {
                 currentCooldowns[i] = currentCooldowns[i] - Time.deltaTime;
             }
         }
         
        
+    }
+    public float GetCurrentCooldown(int index)
+    {
+        return currentCooldowns[index];
     }
 
     float GetFullCooldowns(int index)
@@ -120,7 +120,7 @@ public class CastingSpell : MonoBehaviour {
 
     void SetCurrentCooldown(int index)
     {
-        currentCooldowns[index] = GetFullCooldowns(index);
+        currentCooldowns[index] = currentCooldowns[index] + GetFullCooldowns(index);
     }
 
 
@@ -129,8 +129,18 @@ public class CastingSpell : MonoBehaviour {
         this.castTime = castTime;
         isCasting = true;
         currentSpell = spell;
-        globalCooldown = 0.5f;
         this.index = index;
+        for (int i = 0; i < 6; i++)
+        {
+            if (currentCooldowns[i] < 0)
+            {
+                currentCooldowns[i] = currentCooldowns[i] + globalCooldown;
+            } else if (currentCooldowns[i] <= 1 && currentCooldowns[i] > 0)
+            {
+                currentCooldowns[i] = globalCooldown;
+            }
+
+        }
         
     }
 
@@ -144,7 +154,7 @@ public class CastingSpell : MonoBehaviour {
             {
                 timeCasting = Time.deltaTime + timeCasting;
                 castBar.fillAmount = timeCasting / castTime;
-                castBarTime.text = timeCasting + " / " + castTime; 
+                castBarTime.text = Math.Floor(timeCasting) + " / " + castTime; 
             }
             else
             {

@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castBar: {fileID: 0}
   castBarTime: {fileID: 0}
+  globalCooldown: 0
 --- !u!114 &114372619940354994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,6 +150,12 @@ MonoBehaviour:
   mouse1_0: {fileID: 21300000, guid: 7a8ca745b70481a4c97cddbe550a2f27, type: 3}
   mouse1_1: {fileID: 21300000, guid: 99eb775b6e852c84eae410286edec6ab, type: 3}
   mouse1_2: {fileID: 21300000, guid: 5cb95b08dc60ad143b455addfd0acf84, type: 3}
+  mouse1_Cooldown: {fileID: 0}
+  mouse2_Cooldown: {fileID: 0}
+  keyQ_Cooldown: {fileID: 0}
+  keyE_Cooldown: {fileID: 0}
+  keyR_Cooldown: {fileID: 0}
+  keyF_Cooldown: {fileID: 0}
 --- !u!114 &114865024762334500
 MonoBehaviour:
   m_ObjectHideFlags: 1

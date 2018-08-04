@@ -5,9 +5,13 @@ public class PlayerGuiInfo : MonoBehaviour {
     public Text stats;
     public Image mouse1, mouse2, keyQ, keyE, keyR, keyF;
     public Sprite mouse1_0, mouse1_1, mouse1_2;
+    public Text mouse1_Cooldown, mouse2_Cooldown, keyQ_Cooldown, keyE_Cooldown, keyR_Cooldown, keyF_Cooldown;
+    private CastingSpell castingSpell;
+    
     // Use this for initialization
     void Start() {
         SetIcons();
+        castingSpell = gameObject.GetComponent<CastingSpell>();
         Spells.instantiator = Instantiate;
     }
 
@@ -18,6 +22,18 @@ public class PlayerGuiInfo : MonoBehaviour {
             + gameObject.GetComponent<Stats>().hp.ToString()
             + " Mana: " 
             + gameObject.GetComponent<Stats>().mana.ToString();
+
+        CurrentCooldowns();
+    }
+
+    public void CurrentCooldowns()
+    {
+        mouse1_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(0)).ToString();
+        mouse2_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(1)).ToString();
+        keyQ_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(2)).ToString();
+        keyE_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(3)).ToString();
+        keyR_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(4)).ToString();
+        keyF_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(5)).ToString();
     }
 
     public void SetIcons()
