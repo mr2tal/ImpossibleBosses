@@ -12,7 +12,7 @@ public class Spellbook {
     Action<Vector3> OnM0Key;
     Action<Vector3> OnM1Key;
 
-    
+
 
     public void castSpell(Vector3 destination, KeyCode key) {
         switch (key) {
@@ -37,7 +37,7 @@ public class Spellbook {
             default:
                 break;
         }
-        
+
     }
 
     public struct spellRow {
@@ -46,8 +46,8 @@ public class Spellbook {
         public readonly KeyRep keyRep;
         public readonly float castTime;
         public readonly float cooldown;
-        public readonly Action<Vector3,GameObject> spell;
-        public spellRow(Nr3 nr, RoleClass roleClass, KeyRep keyRep, Action<Vector3,GameObject> spell, float castTime, float cooldown) {
+        public readonly Action<Vector3, GameObject> spell;
+        public spellRow(Nr3 nr, RoleClass roleClass, KeyRep keyRep, Action<Vector3, GameObject> spell, float castTime, float cooldown) {
             this.nr = nr;
             this.roleClass = roleClass;
             this.keyRep = keyRep;
@@ -71,9 +71,9 @@ public class Spellbook {
         M1
     }
     public enum Nr3 {
-        fst,
-        snd,
-        thr
+        fst = 0,
+        snd = 1,
+        thr = 2
     }
     // nr3 = spellnumber, roleclass = player class, keyrep is what button it represent, spell = spell, cast time , cooldown, can it be casted on move?
     public static IQueryable<spellRow> FullSpellBook = new spellRow[] {
@@ -95,31 +95,47 @@ public class Spellbook {
             , new spellRow(Nr3.fst, RoleClass.Mage, KeyRep.F, Spells.F_1Bolt, 1f, 1f)
             , new spellRow(Nr3.snd, RoleClass.Mage, KeyRep.F, Spells.F_2Bolt, 2f, 2f)
             , new spellRow(Nr3.thr, RoleClass.Mage, KeyRep.F, Spells.F_3Bolt, 3f, 3f)
-            ,
+            , new spellRow(Nr3.fst, RoleClass.Warrior, KeyRep.M0, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.snd, RoleClass.Warrior, KeyRep.M0, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.thr, RoleClass.Warrior, KeyRep.M0, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.fst, RoleClass.Warrior, KeyRep.M1, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.snd, RoleClass.Warrior, KeyRep.M1, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.thr, RoleClass.Warrior, KeyRep.M1, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.fst, RoleClass.Warrior, KeyRep.Q, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.snd, RoleClass.Warrior, KeyRep.Q, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.thr, RoleClass.Warrior, KeyRep.Q, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.fst, RoleClass.Warrior, KeyRep.E, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.snd, RoleClass.Warrior, KeyRep.E, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.thr, RoleClass.Warrior, KeyRep.E, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.fst, RoleClass.Warrior, KeyRep.R, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.snd, RoleClass.Warrior, KeyRep.R, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.thr, RoleClass.Warrior, KeyRep.R, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.fst, RoleClass.Warrior, KeyRep.F, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.snd, RoleClass.Warrior, KeyRep.F, Spells.Melee(5), 0, 0.1f)
+            , new spellRow(Nr3.thr, RoleClass.Warrior, KeyRep.F, Spells.Melee(5), 0, 0.1f)
 
         }.AsQueryable();
 
-    public static Action<Vector3,GameObject> index(Nr3 nr, RoleClass roleclass, KeyRep keyrep) {
-        IQueryable<Action<Vector3,GameObject>> quary = from spellRow row
-                                            in FullSpellBook
-                                            where row.roleClass == roleclass
-                                               && row.nr == nr
-                                               && row.keyRep == keyrep
-                                            select row.spell;
+    public static Action<Vector3, GameObject> index(Nr3 nr, RoleClass roleclass, KeyRep keyrep) {
+        IQueryable<Action<Vector3, GameObject>> quary = from spellRow row
+                                                        in FullSpellBook
+                                                        where row.roleClass == roleclass
+                                                           && row.nr == nr
+                                                           && row.keyRep == keyrep
+                                                        select row.spell;
         return quary.First(); // get first spell in resulting table or crash if none exist.
     }
 
-    public static float CastTime(KeyRep keyrep, Action<Vector3, GameObject> spell)  {
-        IQueryable<float> quary =               from spellRow row
-                                                in FullSpellBook
-                                                 where row.spell == spell
-                                                 && row.keyRep == keyrep
-                                                 select row.castTime;
+    public static float CastTime(KeyRep keyrep, Action<Vector3, GameObject> spell) {
+        IQueryable<float> quary = from spellRow row
+                                  in FullSpellBook
+                                  where row.spell == spell
+                                  && row.keyRep == keyrep
+                                  select row.castTime;
         return quary.First(); // get first spell in resulting table or crash if none exist.
     }
 
-    public static float Cooldown(Action<Vector3, GameObject> spell)
-    {
+    public static float Cooldown(Action<Vector3, GameObject> spell) {
         IQueryable<float> quary = from spellRow row
                                   in FullSpellBook
                                   where row.spell == spell
