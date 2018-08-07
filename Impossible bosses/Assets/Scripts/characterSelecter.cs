@@ -2,11 +2,9 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class characterSelecter : MonoBehaviour {
+public class CharacterSelecter : MonoBehaviour {
     public Text choiceText;
-
-
-
+    
     void Start()
     {
         EnemyChoice(1); 
@@ -14,20 +12,14 @@ public class characterSelecter : MonoBehaviour {
 
     void Update()
     {
-        choiceText.text = "Enemy: " + MainSceneStartUpVars.Ename;    
+        choiceText.text = "Enemy: " + GlobalInfo.boss.name;    
     }
 
     private static void setP(string name, int hp, int mana, float movespeed) {
-        MainSceneStartUpVars.Pname = name;
-        MainSceneStartUpVars.Php = hp;
-        MainSceneStartUpVars.Pmana = mana;
-        MainSceneStartUpVars.Pmovesp = movespeed;
+        GlobalInfo.player = new LoadingStats(name, hp, mana, movespeed);
     }
     private static void setE(string name, int hp, int mana, float movespeed) {
-        MainSceneStartUpVars.Ename = name;
-        MainSceneStartUpVars.Ehp = hp;
-        MainSceneStartUpVars.Emana = mana;
-        MainSceneStartUpVars.Emovesp = movespeed;
+        GlobalInfo.boss = new LoadingStats(name, hp, mana, movespeed);
     }
 
     public void StartGame(int selectionChoice)
@@ -36,16 +28,19 @@ public class characterSelecter : MonoBehaviour {
         if (selectionChoice == 1)
         {
             setP("Warrior",10,2,5);
+            GlobalInfo.role = Utilities.RoleClass.Warrior;
         }
         if (selectionChoice == 2)
         {
             setP("Ranger", 5, 5, 5);
+            GlobalInfo.role = Utilities.RoleClass.Ranger;
         }
         if (selectionChoice == 3)
         {
             setP("Mage", 3, 10, 5);
+            GlobalInfo.role = Utilities.RoleClass.Mage;
         }
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("playingMap");
 
 
     }

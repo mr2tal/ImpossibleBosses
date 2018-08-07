@@ -8,7 +8,7 @@ public class EnemyGuiInfo : MonoBehaviour {
 
     void Start()
     {
-        startHP = MainSceneStartUpVars.Ehp;
+        startHP = GlobalInfo.boss.hp;
     }
     void Update()
     {

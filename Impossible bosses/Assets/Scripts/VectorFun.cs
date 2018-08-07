@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System;
 using System.Linq;
 using System.Collections.Generic;
 
@@ -20,13 +19,13 @@ namespace Utilities {
             }
         }
         public static IEnumerable<GameObject> getTagsInRadius(string tag, Vector3 center, float radius) {
-            IEnumerable<GameObject> ob = GameObject.FindGameObjectsWithTag(tag);
-            return ob.Where(x => Vector3.Distance(x.transform.position, center) <= radius);
+            return GameObject.FindGameObjectsWithTag(tag)
+                .Where(x => Vector3.Distance(x.transform.position, center) <= radius);
         }
 
         public static IEnumerable<GameObject> getTagsInCone(string tag, Vector3 center, Vector3 direction, float radius, float angle) {
-            IEnumerable<GameObject> ob = getTagsInRadius(tag, center, radius);
-            return ob.Where(x => Vector3.Angle((x.transform.position - center), direction) <= angle);
+            return getTagsInRadius(tag, center, radius)
+                .Where(x => Vector3.Angle((x.transform.position - center), direction) <= angle);
         }
     }
 }

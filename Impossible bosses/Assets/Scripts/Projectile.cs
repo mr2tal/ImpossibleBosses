@@ -15,17 +15,7 @@ public class Projectile : MonoBehaviour {
         }
         return true;
     }
-
-    // Use this for initialization
-    void Start() {
-        
-    }
-
-    // Update is called once per frame
-    void Update() {
-
-    }
-
+    
     void FixedUpdate() {
         /* Move projectile "upwards", under the assumption that it is already 
          *   rotated such that relative-upwards is towards the target.

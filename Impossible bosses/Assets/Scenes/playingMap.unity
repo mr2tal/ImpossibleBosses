@@ -181,7 +181,8 @@ Prefab:
       propertyPath: m_TagString
       value: Enemies
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114331295317213386, guid: a74d0d1723a63df40bffe477566e4c03, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: a74d0d1723a63df40bffe477566e4c03, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &91212127 stripped
@@ -189,6 +190,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1778380779209248, guid: a74d0d1723a63df40bffe477566e4c03,
     type: 2}
   m_PrefabInternal: {fileID: 91212126}
+--- !u!114 &91212130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91212127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a32792ccc56a747ab4250d4349a5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &101040547 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114258056635378388, guid: 9b0e522d33f4d234a89250e1f5fdb987,
@@ -376,7 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowCursor: 0
   player: {fileID: 1779936088}
-  maxDistance: 5
+  maxDistance: 10
 --- !u!1001 &623641947
 Prefab:
   m_ObjectHideFlags: 0
@@ -778,7 +790,6 @@ Prefab:
         type: 2}
       propertyPath: mouse2_Cooldown
       value: 
-
       objectReference: {fileID: 761656221}
     - target: {fileID: 114534893730136780, guid: eab7b5451d3abdc4e90a435295a27ce9,
         type: 2}
@@ -805,14 +816,12 @@ Prefab:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 91212127}
-
-      objectReference: {fileID: 1711479826}
     - target: {fileID: 1400217867088658, guid: eab7b5451d3abdc4e90a435295a27ce9, type: 2}
       propertyPath: m_TagString
       value: Players
       objectReference: {fileID: 0}
-
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114015749245665130, guid: eab7b5451d3abdc4e90a435295a27ce9, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: eab7b5451d3abdc4e90a435295a27ce9, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1779936088 stripped

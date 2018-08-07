@@ -78,7 +78,18 @@ public class CameraFollow : MonoBehaviour {
             if (player != null) {
                 transform.position = ((player.transform.position + hit) / 2) + offset;
             }
-            
+
+            // zoom in/out
+            float zoom = Input.GetAxis("Mouse ScrollWheel") * 5;
+            if(zoom > 0 && offset.y - zoom >= 10) {
+                offset.y -= zoom;
+            }
+            else if (zoom < 0 && offset.y - zoom <= 20) {
+                offset.y -= zoom;
+            }
+
+
+
             //print(hit);
         }
         // test for my ray from mouse to plane (true if it hits)

@@ -17,17 +17,17 @@ public class Stats : MonoBehaviour {
     }
 
     private void Start() {
-        if (gameObject.GetComponent<ShootProjectile>().isPlayer) {
-            hp = MainSceneStartUpVars.Php;
-            mana = MainSceneStartUpVars.Pmana;
-            mspeed = MainSceneStartUpVars.Pmovesp;
-            gameObject.name = MainSceneStartUpVars.Pname;
+        if (gameObject.tag == "Players") {
+            hp = GlobalInfo.player.hp ;
+            mana = GlobalInfo.player.mana;
+            mspeed = GlobalInfo.player.moveSpeed;
+            gameObject.name = GlobalInfo.player.name;
         }
         else {
-            hp = MainSceneStartUpVars.Ehp;
-            mana = MainSceneStartUpVars.Emana;
-            mspeed = MainSceneStartUpVars.Emovesp;
-            gameObject.name = MainSceneStartUpVars.Ename;
+            hp = GlobalInfo.boss.hp;
+            mana = GlobalInfo.boss.mana;
+            mspeed = GlobalInfo.boss.moveSpeed;
+            gameObject.name = GlobalInfo.boss.name;
         }
     }
 }

@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 33116351037457322}
   - component: {fileID: 23871020035032386}
   - component: {fileID: 136122391087772778}
-  - component: {fileID: 114331295317213386}
   - component: {fileID: 114685506251609698}
   - component: {fileID: 114446128547704442}
+  - component: {fileID: 114350588761089100}
   m_Layer: 0
   m_Name: Evil_Enemy
   m_TagString: Enemies
@@ -87,7 +87,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1778380779209248}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114331295317213386
+--- !u!114 &114350588761089100
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,13 +95,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1778380779209248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d7917fdf58bde4e8a83f6bcb293aaf, type: 3}
+  m_Script: {fileID: 11500000, guid: a1a32792ccc56a747ab4250d4349a5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1400217867088658, guid: eab7b5451d3abdc4e90a435295a27ce9, type: 2}
-  isPlayer: 0
-  projectilePrefab: {fileID: 114294452493122930, guid: 92f6cffd9288c734b952e2060f0c8e0c,
-    type: 2}
 --- !u!114 &114446128547704442
 MonoBehaviour:
   m_ObjectHideFlags: 1

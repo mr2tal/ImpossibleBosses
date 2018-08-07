@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33968048793536592}
   - component: {fileID: 23785363047560300}
   - component: {fileID: 136851651375939216}
-  - component: {fileID: 114015749245665130}
   - component: {fileID: 114865024762334500}
   - component: {fileID: 114372619940354994}
   - component: {fileID: 114534893730136780}
@@ -89,21 +88,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1400217867088658}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114015749245665130
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1400217867088658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d7917fdf58bde4e8a83f6bcb293aaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  isPlayer: 1
-  projectilePrefab: {fileID: 114294452493122930, guid: 92f6cffd9288c734b952e2060f0c8e0c,
-    type: 2}
 --- !u!114 &114094499593632028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,7 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castBar: {fileID: 0}
   castBarTime: {fileID: 0}
-  globalCooldown: 0
 --- !u!114 &114372619940354994
 MonoBehaviour:
   m_ObjectHideFlags: 1
