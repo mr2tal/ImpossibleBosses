@@ -28,12 +28,12 @@ public class PlayerGuiInfo : MonoBehaviour {
 
     public void CurrentCooldowns()
     {
-        mouse1_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(0)).ToString();
-        mouse2_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(1)).ToString();
-        keyQ_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(2)).ToString();
-        keyE_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(3)).ToString();
-        keyR_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(4)).ToString();
-        keyF_Cooldown.text = Mathf.Ceil(castingSpell.GetCurrentCooldown(5)).ToString();
+        mouse1_Cooldown.text = (Mathf.Round(castingSpell.GetCurrentCooldown(0) * 100f) / 100).ToString();
+        mouse2_Cooldown.text = (Mathf.Round(castingSpell.GetCurrentCooldown(1) * 100f) / 100).ToString();
+        keyQ_Cooldown.text = (Mathf.Round(castingSpell.GetCurrentCooldown(2) * 100f) / 100).ToString();
+        keyE_Cooldown.text = (Mathf.Round(castingSpell.GetCurrentCooldown(3) * 100f) / 100).ToString();
+        keyR_Cooldown.text = (Mathf.Round(castingSpell.GetCurrentCooldown(4) * 100f) / 100).ToString();
+        keyF_Cooldown.text = (Mathf.Round(castingSpell.GetCurrentCooldown(5) * 100f) / 100).ToString();
     }
 
     public void SetIcons()
