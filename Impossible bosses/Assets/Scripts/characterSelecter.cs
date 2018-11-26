@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class characterSelecter : MonoBehaviour {
     public Text choiceText;
+    public Text nickText;
 
 
 
@@ -17,7 +18,8 @@ public class characterSelecter : MonoBehaviour {
         choiceText.text = "Enemy: " + MainSceneStartUpVars.Ename;    
     }
 
-    private static void setP(string name, int hp, int mana, float movespeed) {
+    private static void setP(string name, int hp, int mana, float movespeed, string nick) {
+        MainSceneStartUpVars.Pnick = nick;
         MainSceneStartUpVars.Pname = name;
         MainSceneStartUpVars.Php = hp;
         MainSceneStartUpVars.Pmana = mana;
@@ -35,15 +37,15 @@ public class characterSelecter : MonoBehaviour {
       
         if (selectionChoice == 1)
         {
-            setP("Warrior",10,2,5);
+            setP("Warrior", 10, 2, 5, nickText.text.ToString());
         }
         if (selectionChoice == 2)
         {
-            setP("Ranger", 5, 5, 5);
+            setP("Ranger", 5, 5, 10, nickText.text.ToString());
         }
         if (selectionChoice == 3)
         {
-            setP("Mage", 3, 10, 5);
+            setP("Mage", 3, 10, 3, nickText.text.ToString());
         }
         SceneManager.LoadScene(1);
 

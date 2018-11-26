@@ -4,10 +4,17 @@ public class Stats : MonoBehaviour {
     public int hp { get; private set; }
     public int mana { get; private set; }
     public float mspeed { get; private set; }
+    public float aggro { get; private set; }
+    public string nick { get; private set; }
     // buffs.
 
     public void dealDamage(int dmg) {
         hp -= dmg;
+    }
+
+    public void dealAggro(float spellAggro)
+    {
+        aggro = aggro + spellAggro;
     }
 
     private void FixedUpdate() {
@@ -22,6 +29,7 @@ public class Stats : MonoBehaviour {
             mana = MainSceneStartUpVars.Pmana;
             mspeed = MainSceneStartUpVars.Pmovesp;
             gameObject.name = MainSceneStartUpVars.Pname;
+            nick = MainSceneStartUpVars.Pnick;
         }
         else {
             hp = MainSceneStartUpVars.Ehp;

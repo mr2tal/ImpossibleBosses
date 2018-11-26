@@ -1,4 +1,5 @@
 ﻿public static class MainSceneStartUpVars{
+    public static string Pnick = "Player";
     public static string Pname = "hero";
     public static int Php = 10;
     public static int Pmana = 10;

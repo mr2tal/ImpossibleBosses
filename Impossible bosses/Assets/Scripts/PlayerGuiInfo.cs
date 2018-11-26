@@ -17,7 +17,9 @@ public class PlayerGuiInfo : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        stats.text = gameObject.name 
+        stats.text = gameObject.GetComponent<Stats>().nick.ToString()
+            + " " 
+            + gameObject.name 
             + " Hp: "
             + gameObject.GetComponent<Stats>().hp.ToString()
             + " Mana: " 
